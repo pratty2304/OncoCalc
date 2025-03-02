@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSA Calculator for Chemotherapy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>💊 BSA Calculator for Chemotherapy Dosing</h1>
+    <div class="calculator-form">
+        <div class="input-group">
+            <label for="weight">⚖️ Patient's Weight (kg):</label>
+            <input type="number" id="weight" step="0.1" required>
+        </div>
+        <div class="input-group">
+            <label for="height">📏 Patient's Height (cm):</label>
+            <input type="number" id="height" step="0.1" required>
+        </div>
+        <div class="input-group">
+            <label for="regimen">🏥 Select Chemotherapy Regimen:</label>
+            <select id="regimen">
+                <option value="">-- Select Regimen --</option>
+                <optgroup label="🎗️ Breast Cancer">
+                    <option value="AC">AC (Doxorubicin/Cyclophosphamide)</option>
+                    <option value="TCHP">TCHP (Docetaxel/Carboplatin/Herceptin/Perjeta)</option>
+                    <option value="CMF">CMF (Cyclophosphamide/Methotrexate/5-FU)</option>
+                </optgroup>
+                <optgroup label="🎗️ Colorectal Cancer">
+                    <option value="FOLFOX">FOLFOX (5-FU/Leucovorin/Oxaliplatin)</option>
+                    <option value="FOLFIRI">FOLFIRI (5-FU/Leucovorin/Irinotecan)</option>
+                </optgroup>
+                <optgroup label="🎗️ Lung Cancer">
+                    <option value="PC">Carboplatin/Paclitaxel</option>
+                    <option value="EP">Etoposide/Cisplatin</option>
+                </optgroup>
+            </select>
+        </div>
+        <button onclick="calculateBSA()">🔍 Calculate BSA and Doses</button>
+        <div id="result"></div>
+        <div id="doses"></div>
+    </div>
+
+    <footer>
+        <p><small>⚠️ Disclaimer: This calculator is for reference only. Always verify calculations and consult current clinical guidelines.</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
